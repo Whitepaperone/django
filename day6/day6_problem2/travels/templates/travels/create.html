@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1><b>CREATE</b></h1>
+  <form action="{% url 'travels:create' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit">
+  </form>
+  <hr>
+  <a href="{% url 'travels:index' %}">[back]</a>
+  <hr>
+{% endblock content %}
