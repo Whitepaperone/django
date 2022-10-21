@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>menu</h1>
+  <ul>
+    {% for food in foods %}
+    <li>{{ food }}</li>
+    {%endfor%}
+  </ul>
+  <a href='{% url 'index' %}'>INDEX</a>
+{% endblock content %}

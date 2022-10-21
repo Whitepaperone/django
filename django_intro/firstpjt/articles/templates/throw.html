@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{% block content %}
+<h1>Throw</h1>
+<form action="{% url 'catch'%}" method='GET'>
+  <label for"message">Throw</label>
+  <input type="text" name='message' id='message'>
+  <label for"mes1">Throw2</label>
+  <input type="text" name='mes1' id='mes1'>
+  <input type="submit" value='제출'>
+</form>
+<a href='{% url 'index' %}'>INDEX</a>
+{%endblock content %}
